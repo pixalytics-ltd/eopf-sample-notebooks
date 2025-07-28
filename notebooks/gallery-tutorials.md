@@ -19,4 +19,3 @@ Notebooks demonstrating the main workflows for accessing and working with the da
 :category: stac
 :columns: 1 1 2 3
 ```
-        
