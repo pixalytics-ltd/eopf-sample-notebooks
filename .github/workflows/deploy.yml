@@ -47,6 +47,8 @@ jobs:
               - conda-forge
       - name: Generate gallery
         run: micromamba run -n eopf-zarr python generate_gallery.py
+      - name: Generate Jupyterhub button
+        run: micromamba run -n eopf-zarr python add_jupyterhub_buttons.py
       - name: Execute Jupyter Notebooks and Build HTML Assets
         run: myst build --html --execute
       - name: Upload artifact
