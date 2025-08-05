@@ -69,9 +69,9 @@ const plugin = {
         };
 
         // Create JupyterHub URL with fancy forms
-        const baseUrl = "https://jupyterhub.user.eopf.eodc.eu/hub/spawn";
+        const baseUrl = "https://jupyterhub.user.eopf.eodc.eu/hub/login?next=/hub/spawn%23fancy-forms-config%3D";
         const configString = JSON.stringify(fancyFormsConfig);
-        const jupyterHubUrl = `${baseUrl}#fancy-forms-config=${encodeURIComponent(configString)}`;
+        const jupyterHubUrl = `${baseUrl}${encodeURIComponent(configString)}`;
 
         // Get style options
         const isLarge = data.options?.style === "large";
