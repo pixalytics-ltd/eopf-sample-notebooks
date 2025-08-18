@@ -59,7 +59,7 @@ const plugin = {
         }
 
         // Create JupyterHub URL
-        const gitpull_next  = "/hub/user-redirect/git-pull?repo=https://github.com/EOPF-Sample-Service/eopf-sample-notebooks&branch=main&urlpath=lab/tree/eopf-sample-notebooks/notebooks/${notebookPath}"
+        const gitpull_next  = "/hub/user-redirect/git-pull?repo=https://github.com/EOPF-Sample-Service/eopf-sample-notebooks&branch=main&urlpath=lab/tree/eopf-sample-notebooks/notebooks/" + notebookPath
         const encoded = encodeURIComponent(gitpull_next);
         const spawn_next = "/hub/spawn?next=" + encoded
         const auto_start_extra = "%23fancy-forms-config%3D%7B%22default_url%22%3A%22lab%22%2C%22default_url%3Aunlisted_choice%22%3A%22%22%2C%22image%22%3A%22base%22%2C%22image%3Aunlisted_choice%22%3A%22%22%2C%20%22autoStart%22%3A%22true%22%7D"
