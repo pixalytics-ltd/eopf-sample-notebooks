@@ -58,20 +58,12 @@ const plugin = {
           ];
         }
 
-        // Create fancy forms configuration
-        const fancyFormsConfig = {
-          profile: data.options?.profile || "choose-your-environment",
-          image: data.options?.image || "default-notebooks-image",
-          "image:unlisted_choice": "",
-          default_url: "unlisted_choice",
-          "default_url:unlisted_choice": `/lab/tree/notebooks/${notebookPath}`,
-          autoStart: "true",
-        };
-
-        // Create JupyterHub URL with fancy forms
-        const baseUrl = "https://jupyterhub.user.eopf.eodc.eu/hub/login?next=/hub/spawn%23fancy-forms-config%3D";
-        const configString = JSON.stringify(fancyFormsConfig);
-        const jupyterHubUrl = `${baseUrl}${encodeURIComponent(configString)}`;
+        // Create JupyterHub URL
+        const gitpull_next  = "/hub/user-redirect/git-pull?repo=https://github.com/EOPF-Sample-Service/eopf-sample-notebooks&branch=main&urlpath=lab/tree/eopf-sample-notebooks/notebooks/${notebookPath}"
+        const encoded = encodeURIComponent(gitpull_next);
+        const spawn_next = "/hub/spawn?next=" + encoded
+        const auto_start_extra = "%23fancy-forms-config%3D%7B%22default_url%22%3A%22lab%22%2C%22default_url%3Aunlisted_choice%22%3A%22%22%2C%22image%22%3A%22base%22%2C%22image%3Aunlisted_choice%22%3A%22%22%2C%20%22autoStart%22%3A%22true%22%7D"
+        const jupyterHubUrl = "https://jupyterhub.user.eopf.eodc.eu/hub/login?next=" + encodeURIComponent(spawn_next) + auto_start_extra
 
         // Get style options
         const isLarge = data.options?.style === "large";
