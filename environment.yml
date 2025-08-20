@@ -15,6 +15,7 @@ dependencies:
   - fsspec
   - numpy=1.26.4
   - mystmd
+  - myst-nb-bokeh
   - cartopy
   - gdal
   - jupyterlab-myst
@@ -31,4 +32,7 @@ dependencies:
   - s3fs
   - onnxruntime
   - netcdf4
+  - hvplot
+  - bokeh
+  - holoviews
   - pip
