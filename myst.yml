@@ -44,6 +44,7 @@ project:
         - file: notebooks/STAC/STAC_EOPF_ZARR_SENTINEL.ipynb
         - file: notebooks/Sentinel-2/Sentinel-2_NDSI_Snow_Mapping.ipynb
         - file: notebooks/Sentinel-2/oceanographic_wave_spectral_analysis.ipynb
+        - file: notebooks/Sentinel-2/oil_spill_index.ipynb
 
     # Gallery categories (visible in navigation)
     - file: notebooks/gallery-sentinel.md
