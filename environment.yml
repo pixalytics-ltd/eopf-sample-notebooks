@@ -5,7 +5,7 @@ dependencies:
   - python=3.11
   - xarray
   - xarray-eopf>=0.1.1
-  - xcube-eopf>=0.1.0
+  - xcube-eopf>=0.2.0
   - xcube-stac
   - folium
   - graphviz
