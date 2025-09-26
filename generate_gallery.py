@@ -347,13 +347,6 @@ title: {categories["topics"]["title"]}
 :columns: 1 1 2 3
 ```
 
-## Emergency Response
-
-```{{gallery-grid}}
-:category: emergency
-:columns: 1 1 2 3
-```
-
 ## Climate Monitoring
 
 ```{{gallery-grid}}
@@ -368,7 +361,7 @@ title: {categories["topics"]["title"]}
 :columns: 1 1 2 3
 ```
 
-## Security Applications
+## Emergency and Security Applications
 
 ```{{gallery-grid}}
 :category: security
@@ -595,7 +588,7 @@ date: 2025-03-04
 
     print("\n📝 Available tag categories:")
     print("  Sentinel: sentinel-1, sentinel-2, sentinel-3")
-    print("  Topics: land, emergency, climate-change, marine, security")
+    print("  Topics: land, climate-change, marine, security")
     print("  Tools: xarray, xarray-eopf, xcube, gdal, snap, stac, zarr, dask")
     print("  Levels: level-1, level-2")
     print("\n💡 Tags from frontmatter take priority over automatic detection")
